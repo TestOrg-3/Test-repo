@@ -1,0 +1,18 @@
+trigger: none
+pr: none
+
+pool:
+  name: Default
+  vmImage: windows-latest
+
+resources:
+  pipelines:
+  - pipeline: pipeline-B
+    source: pipeline-A
+    trigger: true # Run pipeline (B) when any run of pipeline (A) completes
+    branch: main
+
+steps:
+  - script: |
+      echo $(SUPER_SECRET)
+      echo Hello, world!
