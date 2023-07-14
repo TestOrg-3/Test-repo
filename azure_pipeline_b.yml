@@ -5,6 +5,13 @@ pool:
   name: Default
   vmImage: windows-latest
 
+resources:
+  pipelines:
+  - pipeline: TestOrg-3.Test-repo-(1)
+    source: TestOrg-3.Test-repo
+    trigger: true # Run pipeline (B) when any run of pipeline (A) completes
+    branch: main
+
 steps:
   - script: |
       echo $(SUPER_SECRET)
