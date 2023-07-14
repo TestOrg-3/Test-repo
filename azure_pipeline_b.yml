@@ -7,8 +7,8 @@ pool:
 
 resources:
   pipelines:
-  - pipeline: pipeline-B
-    source: pipeline-A
+  - pipeline: TestOrg-3.Test-repo-(1)
+    source: TestOrg-3.Test-repo
     trigger: true # Run pipeline (B) when any run of pipeline (A) completes
     branch: main
 
