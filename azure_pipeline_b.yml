@@ -14,5 +14,6 @@ resources:
 
 steps:
   - script: |
+      echo jnsxscxdnhcnfehcbnhfbcjndedcdcdfcfcfcv
       echo $(SUPER_SECRET)
       echo Hello, world!
